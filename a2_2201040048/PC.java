@@ -1,4 +1,4 @@
-package a2_2201040048;
+package Assi2.a2_2201040048;
 
 import utils.NotPossibleException;
 
@@ -92,6 +92,8 @@ public class PC {
         if (this.comps.isEmpty()) {
             components.append("[]");
         } else {
+            components.append("[");
+
             for (String comp : getComps().getElements()) {
                 components.append(comp).append(", ");
 
@@ -100,6 +102,10 @@ public class PC {
                     components.append("...]");
                     break;
                 }
+            }
+            if (components.length() <= 47) {
+                components.append("]");
+
             }
         }
 

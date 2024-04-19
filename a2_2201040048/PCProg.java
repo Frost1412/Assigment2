@@ -1,4 +1,4 @@
-package a2_2201040048;
+package Assi2.a2_2201040048;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
