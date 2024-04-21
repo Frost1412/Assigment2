@@ -31,21 +31,21 @@ public class PC {
     }
 
     public boolean validateModel(String model) {
-        return model.length() <= 20;
+        return !model.isEmpty() && model.length() <= 20;
     }
     public boolean validateYear(int year) {
         return year >= 1984;
     }
     public boolean validateManufacturer(String manufacturer) {
-        return manufacturer.length() <= 15;
+        return !manufacturer.isEmpty() && manufacturer.length() <= 15;
     }
 
 
 
 
     public void setModel(String model) {
-        if(validateModel(model)) {
-            this.model = model;
+        if(validateModel(model.trim())) {
+            this.model = model.trim();
         } else {
             throw new NotPossibleException("Invalid model");
         }
@@ -64,8 +64,8 @@ public class PC {
         }
     }
     public void setManufacturer(String manufacturer) {
-        if(validateManufacturer(manufacturer)) {
-            this.manufacturer = manufacturer;
+        if(validateManufacturer(manufacturer.trim())) {
+            this.manufacturer = manufacturer.trim();
         } else {
             throw new NotPossibleException("Invalid manufacturer");
         }
