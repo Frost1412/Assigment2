@@ -50,7 +50,7 @@ public class PC {
             throw new NotPossibleException("Invalid model");
         }
     }
-//    public void setComps(Set<String> comps) {
+    //    public void setComps(Set<String> comps) {
 //        this.comps = comps;
 //    }
     public void addComp(String comp) {
@@ -88,28 +88,7 @@ public class PC {
 
     @Override
     public String toString() {
-        StringBuilder components = new StringBuilder();
-        if (this.comps.isEmpty()) {
-            components.append("[]");
-        } else {
-            components.append("[");
-
-            for (String comp : getComps().getElements()) {
-                components.append(comp).append(", ");
-
-                if (components.length() > 47) {
-                    components = new StringBuilder(components.substring(0, 47));
-                    components.append("...]");
-                    break;
-                }
-            }
-            if (components.length() <= 47) {
-                components.append("]");
-
-            }
-        }
-
-        return String.format("%20s %6d %15s %s", this.model, this.year, this.manufacturer, components.toString());
+        return String.format("PC<%s, %d, %s, ",this.model,this.year,this.manufacturer) + this.comps + ">";
 
     }
 
