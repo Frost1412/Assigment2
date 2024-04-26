@@ -9,8 +9,8 @@ public class PC {
     private Set<String> comps;
 
     public PC(String model, int year, String manufacturer, Set<String> comps) {
-        if(validateModel(model)) {
-            this.model = model;
+        if(validateModel(model.trim())) {
+            this.model = model.trim();
         } else {
             throw new NotPossibleException("Invalid Model");}
 
@@ -19,8 +19,8 @@ public class PC {
         } else {
             throw new NotPossibleException("Invalid Year");
         }
-        if(validateManufacturer(manufacturer)) {
-            this.manufacturer = manufacturer;
+        if(validateManufacturer(manufacturer.trim())) {
+            this.manufacturer = manufacturer.trim();
 
         } else {
             throw new NotPossibleException("Invalid Manufacturer");
