@@ -56,20 +56,8 @@ public class PC {
     public void addComp(String comp) {
         this.comps.insert(comp);
     }
-    public void setYear(int year) {
-        if(validateYear(year)) {
-            this.year = year;
-        } else {
-            throw new NotPossibleException("Invalid year");
-        }
-    }
-    public void setManufacturer(String manufacturer) {
-        if(validateManufacturer(manufacturer.trim())) {
-            this.manufacturer = manufacturer.trim();
-        } else {
-            throw new NotPossibleException("Invalid manufacturer");
-        }
-    }
+
+
 
 
     public String getModel() {
