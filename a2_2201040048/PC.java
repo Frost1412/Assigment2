@@ -78,7 +78,7 @@ public class PC {
 
     @Override
     public String toString() {
-        return String.format("PC<%s, %d, %s, ",this.model,this.year,this.manufacturer) + this.comps + ">";
+        return String.format("PC<%s, %d, %s, ",this.getModel(),this.getYear(),this.getManufacturer()) + this.getComps() + ">";
 
     }
 
@@ -94,9 +94,9 @@ public class PC {
 
         PC pc = (PC) obj;
         return this.year == pc.year
-                && this.model.equals(pc.model)
-                && this.manufacturer.equals(pc.manufacturer)
-                && this.comps.equals(pc.comps);
+                && this.getModel().equals(pc.getModel())
+                && this.getManufacturer().equals(pc.getManufacturer())
+                && this.getComps().equals(pc.getComps());
     }
 
 
