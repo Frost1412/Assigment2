@@ -43,9 +43,10 @@ public class PC {
 
 
 
-    public void setModel(String model) {
+    public boolean setModel(String model) {
         if(validateModel(model.trim())) {
             this.model = model.trim();
+            return true;
         } else {
             throw new NotPossibleException("Invalid model");
         }
@@ -53,8 +54,9 @@ public class PC {
     //    public void setComps(Set<String> comps) {
 //        this.comps = comps;
 //    }
-    public void addComp(String comp) {
+    public boolean addComp(String comp) {
         this.comps.insert(comp);
+        return true;
     }
 
 
